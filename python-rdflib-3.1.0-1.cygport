@@ -1,0 +1,4 @@
+inherit distutils
+
+
+HOMEPAGE="http://www.rdflib.net/"
