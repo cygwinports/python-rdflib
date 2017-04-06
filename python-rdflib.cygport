@@ -1,13 +1,19 @@
-GIT_URI="git://github.com/RDFLib/rdflib.git"
-GIT_TAG=${VERSION}
-inherit distutils git
+inherit python-wheel
 
 NAME="python-rdflib"
-VERSION=3.2.3
+VERSION=4.2.2
 RELEASE=1
 CATEGORY="Python"
 SUMMARY="Python RDF library"
 DESCRIPTION="RDFLib is a Python library for working with RDF, a simple yet
 powerful language for representing information. The library contains parsers
 and serializers for RDF/XML, N3, NTriples, Turtle, TriX and RDFa."
-HOMEPAGE="http://github.com/RDFLib/"
+HOMEPAGE="https://github.com/RDFLib/rdflib/"
+SRC_URI="${HOMEPAGE}/archive/${VERSION}/rdflib-${VERSION}.tar.gz"
+SRC_DIR="rdflib-${VERSION}"
+
+ARCH=noarch
+
+python2_rdflib_REQUIRES="python2-html5lib"
+python3_rdflib_REQUIRES="python3-html5lib"
+python3_rdflib_CONTENTS="usr/bin/ ${python3_rdflib_CONTENTS}"
