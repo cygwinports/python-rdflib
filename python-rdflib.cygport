@@ -2,7 +2,7 @@ inherit python-wheel
 
 NAME="python-rdflib"
 VERSION=4.2.2
-RELEASE=1
+RELEASE=2
 CATEGORY="Python"
 SUMMARY="Python RDF library"
 DESCRIPTION="RDFLib is a Python library for working with RDF, a simple yet
@@ -14,6 +14,7 @@ SRC_DIR="rdflib-${VERSION}"
 
 ARCH=noarch
 
-python2_rdflib_REQUIRES="python2-html5lib"
-python3_rdflib_REQUIRES="python3-html5lib"
-python3_rdflib_CONTENTS="usr/bin/ ${python3_rdflib_CONTENTS}"
+python27_rdflib_REQUIRES="python27-html5lib"
+python36_rdflib_REQUIRES="python36-html5lib"
+python37_rdflib_REQUIRES="python37-html5lib"
+python37_rdflib_CONTENTS+=" usr/bin/"
